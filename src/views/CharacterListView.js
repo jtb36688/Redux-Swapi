@@ -13,10 +13,10 @@ class CharacterListView extends React.Component {
     return (
       <div>
         {this.props.isLoading && (
-          <div>
+          <div style={{textAlign: 'center'}}>
             <Loader
-              type="Ball-Triangle"
-              color="#00BFFF"
+              type="TailSpin"
+              color="gold"
               height="90"
               width="60"
             />
@@ -33,7 +33,7 @@ class CharacterListView extends React.Component {
 
 const mapStateToProps = state => ({
   characters: state.charsReducer.characters,
-  isLoading: state.isLoading
+  isLoading: state.charsReducer.isLoading
 });
 
 export default connect(
